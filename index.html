@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATRIA WEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>MANGA STORE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Kategori</a></li>
+                <li><a href="#">Kontak</a></li>
+                <li><a href="#" id="cart-link">Keranjang (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="book-list">
+            <!-- Buku Manga 1 -->
+            <div class="book-item">
+                <img src="326451.jpg" alt="Manga 1">
+                <h3>One Piece</h3>
+                <p class="description">Petualangan Luffy untuk mencari harta karun legendaris, One Piece!</p>
+                <p class="price">Rp 85.000</p>
+                <button class="add-to-cart" onclick="addToCart('One Piece', 85000)">Tambah ke Keranjang</button>
+            </div>
+
+            <!-- Buku Manga 2 -->
+            <div class="book-item">
+                <img src="naruto.jpg" alt="Manga 2">
+                <h3>Naruto</h3>
+                <p class="description">Cerita tentang Naruto Uzumaki yang ingin menjadi Hokage dan melindungi desa.</p>
+                <p class="price">Rp 80.000</p>
+                <button class="add-to-cart" onclick="addToCart('Naruto', 80000)">Tambah ke Keranjang</button>
+            </div>
+
+            <!-- Buku Manga 3 -->
+            <div class="book-item">
+                <img src="attack on titan.jpg" alt="Manga 3">
+                <h3>Attack on Titan</h3>
+                <p class="description">Pahlawan melawan raksasa untuk menyelamatkan umat manusia!</p>
+                <p class="price">Rp 95.000</p>
+                <button class="add-to-cart" onclick="addToCart('Attack on Titan', 95000)">Tambah ke Keranjang</button>
+            </div>
+
+            <!-- Buku Manga 4 -->
+            <div class="book-item">
+                <img src="images.jpg" alt="Manga 4">
+                <h3>Demon Slayer</h3>
+                <p class="description">Kisah Tanjiro dan perjuangannya melawan iblis untuk menyelamatkan adiknya.</p>
+                <p class="price">Rp 90.000</p>
+                <button class="add-to-cart" onclick="addToCart('Demon Slayer', 90000)">Tambah ke Keranjang</button>
+            </div>
+
+            <!-- Buku Manga 5 -->
+            <div class="book-item">
+                <img src="satria web.jpg" alt="Manga 5">
+                <h3>My Hero Academia</h3>
+                <p class="description">Cerita Izuku Midoriya dalam dunia superhero yang penuh tantangan.</p>
+                <p class="price">Rp 100.000</p>
+                <button class="add-to-cart" onclick="addToCart('My Hero Academia', 100000)">Tambah ke Keranjang</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Toko Manga Online</p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Keranjang Anda</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: Rp <span id="cart-total">0</span></p>
+            <button onclick="checkout()">Proses Pembelian</button>
+            <button onclick="closeCart()">Tutup</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
